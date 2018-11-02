@@ -20,7 +20,4 @@ public class NoNullArrayList<T> extends ArrayList<T>{
 		}
 		super.set(index, element);
 	}
-
-
-
 }
