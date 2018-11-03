@@ -1,13 +1,3 @@
-/**import java.util.ArrayList;
-
-   public class Driver{
-   public static void main(String[] args) {
-   //NoNullArrayList<String> a = new NoNullArrayList<String>();
-   ArrayList<String> b = new ArrayList(5);
-   }
-   }
- **/
-
 import java.util.ArrayList;
 public class Driver {
 	public static void main(String args[]){
