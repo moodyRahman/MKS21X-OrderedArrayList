@@ -31,7 +31,9 @@ public class Driver {
 		System.out.println("--------");
 
 		OrderedArrayList<String> olist = new OrderedArrayList<String>();
-		olist.add("aware");
+		olist.add("gware");
+		olist.add("bware");
+		olist.add("gware");
 		olist.add("slit");
 		olist.add("float");
 		olist.add("lettuce");
