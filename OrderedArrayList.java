@@ -15,24 +15,40 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
 	//╠═╣ ││ ││└─┐
 	//╩ ╩─┴┘─┴┘└─┘
 
-	public boolean toAdd(T inQuestion, T current){
+	private boolean toAdd(T inQuestion, T current){
 		if (inQuestion.compareTo(current) < 0){
 			return false;
 		}
 		return true;
 	}
 
+	private void sorter(T element){
+		for (int x = 0; x < this.size() - 1; x++){
+			if (toAdd(element, this.get(x))){
+				super.add(x, element);
+				break;
+			}
+		}
+	}
+
 	public void add(int index, T element){
 		if (this.size() == 0){
 			super.add(element);
 		}
-
-		for (int x = 0; x < this.size() - 1; x++){
-			if (this.get(x).compareTo(this.get(x+1)) >= 0){
-				super.add(x, element);
+		else{
+			if (this.size() == 1){
+				if (toAdd(this.get(0), element)) {
+					super.add(element);
+				}
+				else {
+					super.add(0, element);
+				}
 			}
-		}
-	}
+			else{
+				sorter(element);
+					}
+				}
+			}
 
 	public boolean add(T element){
 		if (element == null){
